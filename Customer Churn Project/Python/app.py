@@ -5,7 +5,7 @@ import pandas as pd
 model = joblib.load("rf_model_compressed.pkl")
 
 st.title("Customer Retention Prediction App")
-st.write("Enter customer details below to predict if they will stay or leave the company 👇")
+st.write("Enter customer details below to predict if they will stay or leave the company ")
 
 age = st.number_input("Age", min_value=0, max_value=100, value=30)
 tenure = st.number_input("Tenure (days with company)", min_value=0, value=365)
@@ -38,10 +38,10 @@ input_data = pd.DataFrame({
     "last_interaction": [last_interaction]
 })
 
-if st.button("🔍 Predict"):
+if st.button(" Predict"):
     prediction = model.predict(input_data)[0]
 
     if prediction == 1:
-        st.error("🚨 The customer WILL LEAVE the company.")
+        st.error("The customer WILL LEAVE the company.")
     else:
-        st.success("✅ The customer WILL STAY with the company.")
+        st.success("The customer WILL STAY with the company.")
