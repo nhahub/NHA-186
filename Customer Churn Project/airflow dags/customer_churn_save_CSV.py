@@ -6,8 +6,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 
-os.environ['KAGGLE_USERNAME'] = 'ahmed0elshafey0'
-os.environ['KAGGLE_KEY'] = '3e662d52c4b9fcc84b873cb1efc46604'
+os.environ['KAGGLE_USERNAME'] = '************'
+os.environ['KAGGLE_KEY'] = '***************'
 
 DATA_DIR = "/opt/airflow/data"
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -126,5 +126,4 @@ task_save = PythonOperator(
     dag=dag,
 )
 
-# تعريف التبعيات
 task_download >> task_predict >> task_save
