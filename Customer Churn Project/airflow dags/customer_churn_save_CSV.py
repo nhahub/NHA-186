@@ -6,8 +6,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 
-os.environ['KAGGLE_USERNAME'] = '************'
-os.environ['KAGGLE_KEY'] = '***************'
+os.environ['KAGGLE_USERNAME'] = '***********'
+os.environ['KAGGLE_KEY'] = '**************'
 
 DATA_DIR = "/opt/airflow/data"
 os.makedirs(DATA_DIR, exist_ok=True)
