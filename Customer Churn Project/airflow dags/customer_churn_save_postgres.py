@@ -8,8 +8,8 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 from datetime import datetime
 
 # Environment setup
-os.environ['KAGGLE_USERNAME'] = '***********'
-os.environ['KAGGLE_KEY'] = '**********************'
+os.environ['KAGGLE_USERNAME'] = '************'
+os.environ['KAGGLE_KEY'] = '*********************'
 
 DATA_DIR = "/opt/airflow/data"
 os.makedirs(DATA_DIR, exist_ok=True)
