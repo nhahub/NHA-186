@@ -16,7 +16,7 @@ uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
 if uploaded_file is not None:
     # Read the uploaded CSV
     df = pd.read_csv(uploaded_file)
-    st.write("✅ File uploaded successfully. Here’s a preview:")
+    st.write("File uploaded successfully. Here’s a preview:")
     st.dataframe(df.head())
 
     # Normalize column names
